@@ -98,7 +98,6 @@
 		F1BD04AB20641EE700B47957 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
-				F1BD04E3206425A000B47957 /* Info.plist */,
 				F1BD04DA20641EFE00B47957 /* AppDelegate */,
 				F1BD04E020641FA200B47957 /* CollectionViewCell */,
 				F1BD04DB20641F0E00B47957 /* Controllers */,
@@ -156,6 +155,7 @@
 		F1BD04DD20641F5D00B47957 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				F1BD04E3206425A000B47957 /* Info.plist */,
 				F1BD04B320641EE700B47957 /* Assets.xcassets */,
 			);
 			path = SupportingFiles;
