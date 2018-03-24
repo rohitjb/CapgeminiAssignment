@@ -10,6 +10,8 @@
 		F104EC0320668B4C0028E1C0 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104EC0220668B4C0028E1C0 /* Info.swift */; };
 		F104EC0520668BE20028E1C0 /* CanadaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104EC0420668BE20028E1C0 /* CanadaInfo.swift */; };
 		F104EC0820668C9C0028E1C0 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104EC0720668C9C0028E1C0 /* APIErrors.swift */; };
+		F104EC0A206690F10028E1C0 /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104EC09206690F10028E1C0 /* NetworkDataLoader.swift */; };
+		F104EC0D2066921B0028E1C0 /* String+URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104EC0C2066921B0028E1C0 /* String+URLRequest.swift */; };
 		F1BD04AD20641EE700B47957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD04AC20641EE700B47957 /* AppDelegate.swift */; };
 		F1BD04AF20641EE700B47957 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD04AE20641EE700B47957 /* InfoViewController.swift */; };
 		F1BD04B220641EE700B47957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BD04B020641EE700B47957 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		F104EC0220668B4C0028E1C0 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		F104EC0420668BE20028E1C0 /* CanadaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaInfo.swift; sourceTree = "<group>"; };
 		F104EC0720668C9C0028E1C0 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
+		F104EC09206690F10028E1C0 /* NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataLoader.swift; sourceTree = "<group>"; };
+		F104EC0C2066921B0028E1C0 /* String+URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URLRequest.swift"; sourceTree = "<group>"; };
 		F1BD04A920641EE700B47957 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BD04AC20641EE700B47957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1BD04AE20641EE700B47957 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,14 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		F104EC0B206691F80028E1C0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F104EC0C2066921B0028E1C0 /* String+URLRequest.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		F1BD04A020641EE700B47957 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +126,7 @@
 		F1BD04AB20641EE700B47957 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				F104EC0B206691F80028E1C0 /* Extension */,
 				F1BD04DA20641EFE00B47957 /* AppDelegate */,
 				F1BD04E020641FA200B47957 /* CollectionViewCell */,
 				F1BD04DB20641F0E00B47957 /* Controllers */,
@@ -190,6 +203,7 @@
 		F1BD04DF20641F9100B47957 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				F104EC09206690F10028E1C0 /* NetworkDataLoader.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -337,11 +351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F104EC0D2066921B0028E1C0 /* String+URLRequest.swift in Sources */,
 				F104EC0520668BE20028E1C0 /* CanadaInfo.swift in Sources */,
 				F1BD04E62064BA9800B47957 /* InfoCollectionViewCell.swift in Sources */,
 				F104EC0320668B4C0028E1C0 /* Info.swift in Sources */,
 				F1BD04AF20641EE700B47957 /* InfoViewController.swift in Sources */,
 				F1BD04AD20641EE700B47957 /* AppDelegate.swift in Sources */,
+				F104EC0A206690F10028E1C0 /* NetworkDataLoader.swift in Sources */,
 				F104EC0820668C9C0028E1C0 /* APIErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
