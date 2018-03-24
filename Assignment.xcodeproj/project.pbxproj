@@ -12,6 +12,7 @@
 		F104EC0820668C9C0028E1C0 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104EC0720668C9C0028E1C0 /* APIErrors.swift */; };
 		F104EC0A206690F10028E1C0 /* NetworkDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104EC09206690F10028E1C0 /* NetworkDataLoader.swift */; };
 		F104EC0D2066921B0028E1C0 /* String+URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104EC0C2066921B0028E1C0 /* String+URLRequest.swift */; };
+		F104EC0F2066ADF30028E1C0 /* String+DynamicHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104EC0E2066ADF30028E1C0 /* String+DynamicHeight.swift */; };
 		F1BD04AD20641EE700B47957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD04AC20641EE700B47957 /* AppDelegate.swift */; };
 		F1BD04AF20641EE700B47957 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BD04AE20641EE700B47957 /* InfoViewController.swift */; };
 		F1BD04B220641EE700B47957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BD04B020641EE700B47957 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		F104EC0720668C9C0028E1C0 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
 		F104EC09206690F10028E1C0 /* NetworkDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataLoader.swift; sourceTree = "<group>"; };
 		F104EC0C2066921B0028E1C0 /* String+URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URLRequest.swift"; sourceTree = "<group>"; };
+		F104EC0E2066ADF30028E1C0 /* String+DynamicHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+DynamicHeight.swift"; sourceTree = "<group>"; };
 		F1BD04A920641EE700B47957 /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BD04AC20641EE700B47957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1BD04AE20641EE700B47957 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				F104EC0C2066921B0028E1C0 /* String+URLRequest.swift */,
+				F104EC0E2066ADF30028E1C0 /* String+DynamicHeight.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				F1BD04AD20641EE700B47957 /* AppDelegate.swift in Sources */,
 				F104EC0A206690F10028E1C0 /* NetworkDataLoader.swift in Sources */,
 				F104EC0820668C9C0028E1C0 /* APIErrors.swift in Sources */,
+				F104EC0F2066ADF30028E1C0 /* String+DynamicHeight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -512,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

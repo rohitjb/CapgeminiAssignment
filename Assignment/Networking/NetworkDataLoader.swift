@@ -41,7 +41,7 @@ class NetworkDataLoader {
         dataTask?.resume()
     }
 
-    func parseData(_ data: Data, completion: QueryCompletionHandler) {
+    private func parseData(_ data: Data, completion: QueryCompletionHandler) {
         do {
             var canadaInfo = try decoder.decode(CanadaInfo.self, from: data)
             let filteredElements = canadaInfo.rows.filter{ $0.title != nil }
