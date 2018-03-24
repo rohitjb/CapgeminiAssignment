@@ -18,6 +18,10 @@ class InfoViewController: UIViewController {
         infoCollectionView.addSubview(refreshControl)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     @objc func refresh(_ refreshControl: UIRefreshControl) {
     }
 }
