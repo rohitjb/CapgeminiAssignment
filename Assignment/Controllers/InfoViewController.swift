@@ -3,8 +3,9 @@ import UIKit
 private enum InfoViewConstant {
     static let imageViewHeight: CGFloat = 185
     static let padding: CGFloat = 8
+    static let descriptionFont: UIFont = UIFont.systemFont(ofSize: 17)
     static let totalPredefinedHeight: CGFloat =  {
-        return InfoViewConstant.imageViewHeight + InfoViewConstant.padding * 2
+        return InfoViewConstant.imageViewHeight + InfoViewConstant.padding * 4
     }()
 }
 
@@ -75,13 +76,13 @@ class InfoViewController: UIViewController {
 }
 
 extension InfoViewController: UICollectionViewDelegateFlowLayout {
-
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let info = canadaInfo?.rows[indexPath.item]
-        print(info?.description)
-        return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/3)
+        let descriptionSize = info?.description?.size(font: InfoViewConstant.descriptionFont, maxSize: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        let totalHeight: CGFloat = InfoViewConstant.totalPredefinedHeight + (descriptionSize?.height ?? 0) + InfoViewConstant.padding
+        return CGSize(width: UIScreen.main.bounds.width, height: totalHeight)
     }
 }
 
@@ -95,8 +96,8 @@ extension InfoViewController: UICollectionViewDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIndentifier,
                                                       for: indexPath) as! InfoCollectionViewCell
-        (indexPath.item % 2 == 0) ? cell.updateColor(color: UIColor.blue) : cell.updateColor(color: UIColor.red)
-        
+        let info = canadaInfo?.rows[indexPath.item]
+        cell.infoModel = info
         return cell
     }
 }

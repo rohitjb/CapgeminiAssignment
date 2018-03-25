@@ -60,7 +60,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKt-Wn-cUv">
-                                                    <rect key="frame" x="8" y="222" width="42" height="21"/>
+                                                    <rect key="frame" x="8" y="222" width="359" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -71,7 +71,7 @@
                                         <constraints>
                                             <constraint firstItem="ZqK-76-Ly9" firstAttribute="leading" secondItem="BL7-my-vPs" secondAttribute="leading" constant="8" id="1cx-dy-kpc"/>
                                             <constraint firstItem="ZqK-76-Ly9" firstAttribute="top" secondItem="k0v-WF-j17" secondAttribute="bottom" constant="8" id="FuE-Xp-dai"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aKt-Wn-cUv" secondAttribute="trailing" constant="8" id="VwM-Ss-96o"/>
+                                            <constraint firstAttribute="trailing" secondItem="aKt-Wn-cUv" secondAttribute="trailing" constant="8" id="VfA-vJ-DqM"/>
                                             <constraint firstItem="FJY-Tk-QSj" firstAttribute="top" secondItem="BL7-my-vPs" secondAttribute="top" id="cgg-AZ-6cr"/>
                                             <constraint firstItem="aKt-Wn-cUv" firstAttribute="top" secondItem="ZqK-76-Ly9" secondAttribute="bottom" constant="8" id="d9p-sm-dHk"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="ZqK-76-Ly9" secondAttribute="trailing" constant="8" id="kNS-f6-U2h"/>
@@ -116,6 +116,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qCH-vl-KRQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="288.80000000000001" y="187.55622188905548"/>
+        </scene>
+        <!--Info Detail View Controller-->
+        <scene sceneID="inH-2U-36B">
+            <objects>
+                <viewController id="qhn-BR-R5Q" customClass="InfoDetailViewController" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nIf-xb-iv1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wgi-gl-0xO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5q9-nz-o11" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1154" y="188"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ctg-jJ-7Jy">
