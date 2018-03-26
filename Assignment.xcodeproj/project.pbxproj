@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9EBD0DDE2068051900FC24B0 /* InfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBD0DDD2068051900FC24B0 /* InfoDetailViewController.swift */; };
+		9EBD0DE120680BF000FC24B0 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBD0DE020680BF000FC24B0 /* AsyncImageView.swift */; };
 		F104EC0320668B4C0028E1C0 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104EC0220668B4C0028E1C0 /* Info.swift */; };
 		F104EC0520668BE20028E1C0 /* CanadaInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104EC0420668BE20028E1C0 /* CanadaInfo.swift */; };
 		F104EC0820668C9C0028E1C0 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F104EC0720668C9C0028E1C0 /* APIErrors.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		9EBD0DDD2068051900FC24B0 /* InfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailViewController.swift; sourceTree = "<group>"; };
+		9EBD0DE020680BF000FC24B0 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		F104EC0220668B4C0028E1C0 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		F104EC0420668BE20028E1C0 /* CanadaInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaInfo.swift; sourceTree = "<group>"; };
 		F104EC0720668C9C0028E1C0 /* APIErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIErrors.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9EBD0DDF20680BCB00FC24B0 /* CustomImageView */ = {
+			isa = PBXGroup;
+			children = (
+				9EBD0DE020680BF000FC24B0 /* AsyncImageView.swift */,
+			);
+			path = CustomImageView;
+			sourceTree = "<group>";
+		};
 		F104EC0620668C7F0028E1C0 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 		F1BD04AB20641EE700B47957 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				9EBD0DDF20680BCB00FC24B0 /* CustomImageView */,
 				F104EC0B206691F80028E1C0 /* Extension */,
 				F1BD04DA20641EFE00B47957 /* AppDelegate */,
 				F1BD04E020641FA200B47957 /* CollectionViewCell */,
@@ -363,6 +374,7 @@
 				F104EC0320668B4C0028E1C0 /* Info.swift in Sources */,
 				F1BD04AF20641EE700B47957 /* InfoViewController.swift in Sources */,
 				F1BD04AD20641EE700B47957 /* AppDelegate.swift in Sources */,
+				9EBD0DE120680BF000FC24B0 /* AsyncImageView.swift in Sources */,
 				F104EC0A206690F10028E1C0 /* NetworkDataLoader.swift in Sources */,
 				9EBD0DDE2068051900FC24B0 /* InfoDetailViewController.swift in Sources */,
 				F104EC0820668C9C0028E1C0 /* APIErrors.swift in Sources */,

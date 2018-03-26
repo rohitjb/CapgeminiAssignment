@@ -26,11 +26,11 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         infoCollectionView.addSubview(refreshControl)
+        loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadData()
     }
     
     override func viewWillLayoutSubviews() {
@@ -53,15 +53,25 @@ class InfoViewController: UIViewController {
                 self.canadaInfo = canadaInfo
                 DispatchQueue.main.async {
                     self.title = canadaInfo.title
-                    self.refreshControl.endRefreshing()
-                    self.activityIndicator.stopAnimating()
-                    self.infoCollectionView.reloadData()
+                    self.updateCollectionView()
                 }
                 // We had handle the error more precisely rather then just printing to console.
             // The specific type of error can generate specific error for the user
-            case let .failure(error) : print(error)
+            case let .failure(error) :
+                DispatchQueue.main.async {
+                    self.updateCollectionView()
+                    let alertViewController = UIAlertController(title: "", message: error.localizedDescription, preferredStyle: .alert)
+                    alertViewController.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+                    self.present(alertViewController, animated: true, completion: nil)
+                }
             }
         }
+    }
+    
+    func updateCollectionView() {
+        self.refreshControl.endRefreshing()
+        self.activityIndicator.stopAnimating()
+        self.infoCollectionView.reloadData()
     }
     
     func startLoadingIndicator() {
@@ -83,6 +93,15 @@ extension InfoViewController: UICollectionViewDelegateFlowLayout {
         let descriptionSize = info?.description?.size(font: InfoViewConstant.descriptionFont, maxSize: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
         let totalHeight: CGFloat = InfoViewConstant.totalPredefinedHeight + (descriptionSize?.height ?? 0) + InfoViewConstant.padding
         return CGSize(width: UIScreen.main.bounds.width, height: totalHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let infoDetailViewController = storyboard.instantiateViewController(withIdentifier: "InfoDetailViewController") as? InfoDetailViewController {
+            let info = canadaInfo?.rows[indexPath.item]
+            infoDetailViewController.infoModel = info
+            self.navigationController?.pushViewController(infoDetailViewController, animated: true)
+        }
     }
 }
 
