@@ -1,8 +1,8 @@
 import Foundation
 import UIKit
 
-class AsyncImageView: UIView {
-    let canvas: UIImageView = UIImageView()
+class AsyncImageView: UIImageView {
+//    let canvas: UIImageView = UIImageView()
     let imageCache = NSCache<NSString , UIImage>()
     var imageUrlString : String?
 
@@ -17,10 +17,11 @@ class AsyncImageView: UIView {
     }
     
     private func setup() {
-        addSubview(canvas)
-        canvas.contentMode = .scaleAspectFit
-        canvas.translatesAutoresizingMaskIntoConstraints = false
-        canvas.clipsToBounds = true
+//        addSubview(canvas)
+        self.contentMode = .scaleAspectFit
+        self.translatesAutoresizingMaskIntoConstraints = false
+        self.clipsToBounds = true
+/*
         let topConstraint = NSLayoutConstraint(item: canvas,
                                                attribute: .top,
                                                relatedBy: .equal,
@@ -51,10 +52,11 @@ class AsyncImageView: UIView {
                                                     constant: 0)
         addConstraints([topConstraint, bottomConstraint, leadingConstraint, trailingConstraint])
         layoutIfNeeded()
+*/
     }
     
     func reset() {
-        canvas.image = nil
+        self.image = nil
     }
     
     // function to asynchronously load images inside the imageview
@@ -70,8 +72,8 @@ class AsyncImageView: UIView {
         
         if let imageFromCache = imageCache.object(forKey: urlString as NSString){
             DispatchQueue.main.async {
-                self.canvas.image = imageFromCache
-                self.canvas.clipsToBounds = true
+                self.image = imageFromCache
+                self.clipsToBounds = true
             }
             return
         }
@@ -80,7 +82,7 @@ class AsyncImageView: UIView {
             if let _ = error {
                 DispatchQueue.main.async {
                     // if the request could not load then show a broken url image
-                    self.canvas.image = #imageLiteral(resourceName: "placeholder")
+                    self.image = #imageLiteral(resourceName: "placeholder")
                 }
                 return
             } else if let data = data,
@@ -89,16 +91,16 @@ class AsyncImageView: UIView {
                 DispatchQueue.main.async {
                     if let imageToBeStoredInCache = UIImage(data: data){
                         if self.imageUrlString == urlString{
-                            self.canvas.image = imageToBeStoredInCache
-                            self.canvas.clipsToBounds = true
+                            self.image = imageToBeStoredInCache
+                            self.clipsToBounds = true
                         }
                         self.imageCache.setObject(imageToBeStoredInCache, forKey: urlString as NSString)
                     }
                 }
             }else{
                 DispatchQueue.main.async {
-                    self.canvas.image = #imageLiteral(resourceName: "placeholder")
-                    self.canvas.clipsToBounds = true
+                    self.image = #imageLiteral(resourceName: "placeholder")
+                    self.clipsToBounds = true
                 }
             }
         }).resume()
