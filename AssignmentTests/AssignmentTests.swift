@@ -1,11 +1,3 @@
-//
-//  AssignmentTests.swift
-//  AssignmentTests
-//
-//  Created by Sashi Singh on 22/03/18.
-//  Copyright © 2018 Sashi Singh. All rights reserved.
-//
-
 import XCTest
 @testable import Assignment
 
@@ -13,24 +5,22 @@ class AssignmentTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testSizeReturnsTheCorrectValueOfHeight() {
+        let inputString = "This is a Test String."
+        
+        let size = inputString.size(font: UIFont.systemFont(ofSize: 17), maxSize: CGSize(width: 375, height: 10000))
+        
+        let expectedHeight: CGFloat = 20.287109375
+        XCTAssertEqual(size.height, expectedHeight)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testUrlRequestReturnsTheCorrectHttpMethod() {
+        let url = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+        let urlRequest = url.urlRequest()
+        
+        let expectedHttpMethod = "GET"
+        XCTAssertEqual(urlRequest.httpMethod, expectedHttpMethod)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }

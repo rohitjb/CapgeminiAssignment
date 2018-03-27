@@ -2,7 +2,6 @@ import Foundation
 import UIKit
 
 class AsyncImageView: UIImageView {
-//    let canvas: UIImageView = UIImageView()
     let imageCache = NSCache<NSString , UIImage>()
     var imageUrlString : String?
 
@@ -17,42 +16,9 @@ class AsyncImageView: UIImageView {
     }
     
     private func setup() {
-//        addSubview(canvas)
         self.contentMode = .scaleAspectFit
         self.translatesAutoresizingMaskIntoConstraints = false
         self.clipsToBounds = true
-/*
-        let topConstraint = NSLayoutConstraint(item: canvas,
-                                               attribute: .top,
-                                               relatedBy: .equal,
-                                               toItem: self,
-                                               attribute: .top,
-                                               multiplier: 1,
-                                               constant: 0)
-        let bottomConstraint = NSLayoutConstraint(item: canvas,
-                                                  attribute: .bottom,
-                                                  relatedBy: .equal,
-                                                  toItem: self,
-                                                  attribute: .bottom,
-                                                  multiplier: 1,
-                                                  constant: 0)
-        let leadingConstraint = NSLayoutConstraint(item: canvas,
-                                                   attribute: .leading,
-                                                   relatedBy: .equal,
-                                                   toItem: self,
-                                                   attribute: .leading,
-                                                   multiplier: 1,
-                                                   constant: 0)
-        let trailingConstraint = NSLayoutConstraint(item: canvas,
-                                                    attribute: .trailing,
-                                                    relatedBy: .equal,
-                                                    toItem: self,
-                                                    attribute: .trailing,
-                                                    multiplier: 1,
-                                                    constant: 0)
-        addConstraints([topConstraint, bottomConstraint, leadingConstraint, trailingConstraint])
-        layoutIfNeeded()
-*/
     }
     
     func reset() {
