@@ -3,8 +3,11 @@ import Foundation
 typealias QueryCompletionHandler = (_ result : FetchResult) -> Void
 typealias FetchResult = Result<CanadaInfo, APIErrors>
 
+enum NetworkDataLoaderConstant {
+    static let baseUrlString = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+}
+
 class NetworkDataLoader {
-    let baseUrlString = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
     var canadaInfo: CanadaInfo?
     var dataTask: URLSessionDataTask?
     let decoder = JSONDecoder()
@@ -15,7 +18,7 @@ class NetworkDataLoader {
 
     func loadResult(completion: @escaping QueryCompletionHandler) {
         
-        let request = baseUrlString.urlRequest()
+        let request = NetworkDataLoaderConstant.baseUrlString.urlRequest()
         
         dataTask = session.dataTask(with: request) { data, response, error in
             defer { self.dataTask = nil }
