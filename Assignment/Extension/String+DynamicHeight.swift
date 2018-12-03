@@ -7,4 +7,8 @@ extension String {
         let size = CGSize(width: rect.size.width, height: rect.size.height)
         return size
     }
+
+	func makeUppercase() -> String {
+		return self.uppercased()
+	}
 }

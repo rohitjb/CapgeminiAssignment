@@ -16,6 +16,8 @@ class InfoCollectionViewCell: UICollectionViewCell {
                     self.infodescriptionLabel.text = description
                     setupInfoImage()
                 }
+				infoTitleLabel.backgroundColor = UIColor.red
+				infodescriptionLabel.backgroundColor = UIColor.green
             }
         }
     }
